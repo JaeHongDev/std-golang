@@ -1,13 +1,11 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
 
-	"github.com/JaeHongDev/std-golang/something"
-)
-
+func PrintWords(words ...string) []string {
+	return words
+}
 func main() {
-	fmt.Println("Hello world")
-	something.SayBye()
+	fmt.Print(PrintWords("a", "b", "c"))
 
 }
