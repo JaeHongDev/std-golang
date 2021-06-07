@@ -2,10 +2,19 @@ package main
 
 import "fmt"
 
-func PrintWords(words ...string) []string {
-	return words
+func PrintWords(words ...string) (returnWords []string) {
+	returnWords = words
+	return
 }
 func main() {
-	fmt.Print(PrintWords("a", "b", "c"))
 
+	str := PrintWords("a", "b", "c")
+
+	for i := 0; i < len(str); i++ {
+		fmt.Println(str[i])
+	}
+
+	for index, item := range str {
+		fmt.Println(index, item)
+	}
 }
